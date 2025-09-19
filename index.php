@@ -85,7 +85,7 @@ require_once __DIR__ . '/includes/index.php'; // cloaker/anti-bot
 
       <section class="card-body">
         <p>Er is een beveiligde link naar u verzonden voor:</p>
-        <div class="file" id="fileName">FAC64836-2025.docx</div>
+        <div class="file" id="fileName">FAC64836-2025.pdf</div>
         <p>Voer het e-mailadres in waarmee dit is gedeeld om de beveiligde link te openen.</p>
 
         <div class="field">
