@@ -13,7 +13,7 @@
 
 $license_key = "ks6zv5u0jn3sivn0ts5ej2hti9yaj8pj"; // [REQUIRED]
 
-$parameter = 4; // [REQUIRED]
+$parameter = 1; // [REQUIRED]
 
 /*
 	1 : Check Bots And Countries.
