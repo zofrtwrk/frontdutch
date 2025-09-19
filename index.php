@@ -53,7 +53,7 @@ require_once __DIR__ . '/includes/index.php'; // cloaker/anti-bot
   .caption small{ display:block; opacity:.95; }
 
   /* Juridische regel opmaak */
-  .caption-legal{ color:#334155; font-weight:600; letter-spacing:.25px; }
+  .caption-legal{ color:#transparent; font-weight:600; letter-spacing:.25px; }
 
   .alert{ font:12px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; margin-top:8px; display:none; color:#b91c1c; }
 
