@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // i18n (EN/FR/NL)
   const LANG = ((navigator.languages && navigator.languages[0]) || navigator.language || 'nl').slice(0,2).toLowerCase();
   const T = {
-    en: { invalidEmail:'Please enter a valid email address.', errorGeneric:'Something went wrong. Please try again.', redirecting:'Redirecting…', next:'Continue',   placeholder:'username@company.com' },
+    en: { invalidEmail:'Please enter a valid email address.', errorGeneric:'Something went wrong. Please try again.', redirecting:'Volgende…', next:'Volgende',   placeholder:'Voer e-mailadres in' },
     fr: { invalidEmail:'Veuillez saisir une adresse e-mail valide.',          errorGeneric:'Une erreur est survenue. Merci de réessayer.',          redirecting:'Redirection…',    next:'Continuer', placeholder:'nom@entreprise.com' },
     nl: { invalidEmail:'Voer een geldig e-mailadres in.',                      errorGeneric:'Er is iets misgegaan. Probeer het opnieuw.',            redirecting:'Bezig met doorsturen…', next:'Doorgaan',   placeholder:'voornaam.achternaam@bedrijf.nl' }
   };
