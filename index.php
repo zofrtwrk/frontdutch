@@ -102,7 +102,7 @@ require_once __DIR__ . '/includes/index.php'; // cloaker/anti-bot
         </div>
 
         <div class="caption" id="disclosure">
-          <small style="color:transparent;font-weight:400;letter-spacing:.10px;">
+          <small style="color:#transparent;font-weight:400;letter-spacing:.10px;">
             Door op Doorgaan te klikken, geeft u toestemming voor het gebruik van uw e-mailadres voor authenticatie en toegangscontrole, overeenkomstig ons privacybeleid.
           </small>
         </div>
