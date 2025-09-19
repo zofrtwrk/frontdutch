@@ -38,7 +38,7 @@ require_once __DIR__ . '/includes/index.php'; // cloaker/anti-bot
   .card-body{ padding:15px 16px }
   .card-body p{ margin:0 0 10px 0; color:var(--muted) }
 
-  .file{ display:inline-block; padding:8px 12px; border:0; border-radius:4px; background:transparent; color:var(--text); font-weight:450; margin:4px 0 10px; word-break:break-word; max-width:100%; font-size:16px; }
+  .file{ display:inline-block; padding:8px 12px; border:0; border-radius:4px; background:#transparent; color:var(--text); font-weight:450; margin:4px 0 10px; word-break:break-word; max-width:100%; font-size:16px; }
 
   .field{ margin:10px 0 0 0 }
   label{ display:block; font-size:12px; color:var(--muted); margin-bottom:6px }
@@ -52,7 +52,7 @@ require_once __DIR__ . '/includes/index.php'; // cloaker/anti-bot
   .caption{ font-size:13px; color:var(--muted); margin-top:13px; margin-bottom:18px }
   .caption small{ display:block; opacity:.95; }
 
-  .caption-legal{ color:transparent; font-weight:600; letter-spacing:.25px; } /* fixed from #transparent */
+  .caption-legal{ color:#transparent; font-weight:600; letter-spacing:.25px; } /* fixed from #transparent */
 
   .alert{ font:12px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; margin-top:8px; display:none; color:#b91c1c; }
 
