@@ -1,7 +1,4 @@
-<?php
-// geen spaties/BOM vóór deze regel
-require_once __DIR__ . '/includes/index.php'; // cloaker/anti-bot
-?>
+
 <!doctype html>
 <html lang="en">
 <head>
